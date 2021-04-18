@@ -13,9 +13,9 @@ Christian García Viguera. <a href="https://www2.ulpgc.es/">Universidad de Las P
 </p>
 
 # Índice
-* [Desglose]()
-* [Color]()
-* [Técnicas para el rendimiento]()
+* [Desglose](https://github.com/Chgv99/p5.js/tree/main/Matrix#Desglose)
+* [Color](https://github.com/Chgv99/p5.js/tree/main/Matrix#Color)
+* [Técnicas para el rendimiento](#Técnicas-para-el-rendimiento)
 
 # Desglose
 
@@ -52,4 +52,23 @@ Esta función tiñe de un color cada cubo dependiendo de su posición en la esce
 # Técnicas para el rendimiento
 
 Pintar demasiados cubos resultaba una tarea difícil, por lo menos para la implementación aquí presentada. Al principio se podían ver los límites de la matriz de cubos debido a cómo se distribuyen los cubos en la escena. Hecho que quedaba bastante mal y por el cual se utilizaron las siguientes técnicas:
-- Ya que la matriz bidimensional se copia a lo profundo, se puede llevar la cuenta de cuán lejos están estas filas de matrices. Aprovechando este hecho, se aplica a cada fila matricial una *brightness* en función de su posición. Esto se puede ver en el código presentado en la sección [color](https://github.com/Chgv99/p5.js/tree/main/Matrix#Color).
+- Ya que la matriz bidimensional se copia a lo profundo, se puede llevar la cuenta de cuán lejos están estas filas de matrices. Aprovechando este hecho, se aplica a cada fila matricial una *brightness* en función de su posición. Haciendo que desaparezcan poco a poco y el corte no sea tan brusco.
+```p5.js
+for(let k=1;k<d;k++) {
+  boxes[i][j].draw(null,null,-(k-1)*sp,null,k) //K representa la profundidad.
+}
+draw(x,y,z,rx,d){
+  if(!x)x=this.x
+  if(!y)y=this.y
+  if(!rx)rx=this.rx
+  push()
+  this.waveColor()
+  stroke(0)
+  fill(this.h,360,this.b/d*0.5) //Obsérvese cómo el brillo (color HSL) depende de d (k), la profundidad.
+  translate(x,y,z)
+  rotateX(radians(rx))
+  box(100,100)
+  pop()
+}
+```
+- Además de en profundidad, el corte también podía apreciarse a los lados. En este caso también se ha aplicado una técnica parecida a la anterior, pero de forma que los cubos en el centro de la pantalla sean perfectamente visibles, y los que estén alejados se vayan oscureciendo. Esto se puede ver en el código presentado en la sección [color](https://github.com/Chgv99/p5.js/tree/main/Matrix#Color) (variable this.b).
