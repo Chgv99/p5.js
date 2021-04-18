@@ -52,4 +52,4 @@ Esta función tiñe de un color cada cubo dependiendo de su posición en la esce
 # Técnicas para el rendimiento
 
 Pintar demasiados cubos resultaba una tarea difícil, por lo menos para la implementación aquí presentada. Al principio se podían ver los límites de la matriz de cubos debido a cómo se distribuyen los cubos en la escena. Hecho que quedaba bastante mal y por el cual se utilizaron las siguientes técnicas:
-- Ya que la matriz bidimensional se copia a lo profundo, se puede llevar la cuenta de cuán lejos están estas filas de matrices. Aprovechando este hecho, se aplica a cada fila matricial una *brightness* en función de su posición. Esto se puede ver en el código presentado en la sección [color]().
+- Ya que la matriz bidimensional se copia a lo profundo, se puede llevar la cuenta de cuán lejos están estas filas de matrices. Aprovechando este hecho, se aplica a cada fila matricial una *brightness* en función de su posición. Esto se puede ver en el código presentado en la sección [color](https://github.com/Chgv99/p5.js/tree/main/Matrix#Color).
