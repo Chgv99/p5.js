@@ -72,3 +72,11 @@ draw(x,y,z,rx,d){
 }
 ```
 - Además de en profundidad, el corte también podía apreciarse a los lados. En este caso también se ha aplicado una técnica parecida a la anterior, pero de forma que los cubos en el centro de la pantalla sean perfectamente visibles, y los que estén alejados se vayan oscureciendo. Esto se puede ver en el código presentado en la sección [color](https://github.com/Chgv99/p5.js/tree/main/Matrix#Color) (variable this.b).
+
+Estas dos técnicas permiten poder imprimir muchos menos cubos de los que harían falta para que quedase bien.
+
+# Referencias
+
+- Guión de prácticas
+- [p5.js](https://p5js.org/es/reference/)
+- [HSL y HSB. Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV)
