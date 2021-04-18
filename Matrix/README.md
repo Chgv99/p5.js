@@ -14,9 +14,14 @@ Christian García Viguera. <a href="https://www2.ulpgc.es/">Universidad de Las P
 </p>
 
 # Índice
+* [Requisitos](https://github.com/Chgv99/p5.js/tree/main/Matrix#Requisitos)
 * [Desglose](https://github.com/Chgv99/p5.js/tree/main/Matrix#Desglose)
 * [Color](https://github.com/Chgv99/p5.js/tree/main/Matrix#Color)
 * [Técnicas para el rendimiento](#Técnicas-para-el-rendimiento)
+
+# Requisitos 
+
+Se pedía como requisito no superar los 1024 caracteres. Al ser un código algo exigente y tridimensional, y quizá no optimizado al 100%, se ha reducido el número de caracteres usados reduciendo el nombre de las variables y borrando espacios, saltos de línea y tabulaciones.
 
 # Desglose
 
