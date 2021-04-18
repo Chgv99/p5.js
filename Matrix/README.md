@@ -4,6 +4,7 @@ Matrix es un programa de [p5.js](https://p5js.org/es/) que muestra una rejilla d
 
 <p align="center">
   Para visualizar la composición entra <a href="https://editor.p5js.org/christiangv99/full/XJFPKfNqI">aquí</a>.
+  Para visualizar y editar la composición entra <a href="https://editor.p5js.org/christiangv99/sketches/XJFPKfNqI">aquí</a>
 </p>
 <p align="center">
 Christian García Viguera. <a href="https://www2.ulpgc.es/">Universidad de Las Palmas de Gran Canaria</a>.
